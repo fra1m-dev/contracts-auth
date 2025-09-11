@@ -1,5 +1,5 @@
 {
-	"name": "@fraim-dev/contracts-auth",
+	"name": "@fraim/contracts-auth",
 	"version": "1.0.5",
 	"description": "Guards, decorators, pipes for auth/roles/JWT across microservices",
 	"main": "dist/index.js",
