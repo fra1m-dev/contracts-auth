@@ -1,6 +1,6 @@
 {
 	"name": "@fraim-dev/contracts-auth",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Guards, decorators, pipes for auth/roles/JWT across microservices",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
