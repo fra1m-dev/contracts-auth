@@ -1,0 +1,44 @@
+{
+	"name": "@fra1m/contracts-auth",
+	"version": "1.0.0",
+	"description": "Guards, decorators, pipes for auth/roles/JWT across microservices",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"test": "jest --passWithNoTests",
+		"test:watch": "jest --watch",
+		"test:cov": "jest --coverage"
+	},
+	"peerDependencies": {
+		"@nestjs/common": "^11.0.0",
+		"@nestjs/core": "^11.0.0",
+		"@nestjs/jwt": "^11.0.0",
+		"@nestjs/passport": "^11.0.0",
+		"@nestjs/testing": "^11.1.6",
+		"class-transformer": "^0.5.1",
+		"class-validator": "^0.14.1",
+		"express": "^5.1.0",
+		"passport": "^0.7.0",
+		"passport-jwt": "^4.0.1",
+		"rxjs": "^7.8.0"
+	},
+	"devDependencies": {
+		"@nestjs/platform-express": "^11.1.6",
+		"@types/express": "^5.0.3",
+		"@types/jest": "^29.5.14",
+		"@types/supertest": "^6.0.3",
+		"jest": "^29.7.0",
+		"supertest": "^7.1.4",
+		"ts-jest": "^29.4.1",
+		"typescript": "^5.5.0"
+	},
+	"publishConfig": {
+		"prepublishOnly": "npm run build"
+	}
+}
