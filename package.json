@@ -1,6 +1,6 @@
 {
 	"name": "@fra1m-dev/contracts-auth",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Guards, decorators, pipes for auth/roles/JWT across microservices",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
