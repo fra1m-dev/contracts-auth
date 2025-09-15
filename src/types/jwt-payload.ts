@@ -1,8 +1,8 @@
 export interface JwtPayload {
-	id: number;
+	id: string; // для микросервисов лучше string
 	email: string;
 	name: string;
-	role: string | string[];
+	role: 'student' | 'teacher' | 'admin' | 'user';
 	specializationId?: number | null;
 	iat?: number;
 	exp?: number;
