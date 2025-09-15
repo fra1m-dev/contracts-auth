@@ -1,12 +1,16 @@
 {
-	"name": "@fraim/contracts-auth",
-	"version": "1.0.5",
+	"name": "@fra1m-dev/contracts-auth",
+	"version": "1.0.6",
 	"description": "Guards, decorators, pipes for auth/roles/JWT across microservices",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fra1m-dev/contracts-auth.git"
+	},
 	"sideEffects": false,
 	"scripts": {
 		"build": "tsc -p tsconfig.json",

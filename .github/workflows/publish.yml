@@ -1,22 +1,33 @@
-name: Publish
+name: Publish Package
+
 on:
   push:
-    tags: ['v*.*.*']
+    tags: ['v*.*.*']   # публикуем при пуше тега vX.Y.Z
+  workflow_dispatch: {} # и можно запустить вручную из Actions
+
 permissions:
   contents: read
-  packages: write
+  packages: write       # важно: даёт право публиковать в GitHub Packages
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@fraim-dev'
-      - run: npm ci
-      - run: npm run build
-      - run: npm publish
+          registry-url: https://npm.pkg.github.com
+          scope: '@fra1m-dev'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish
+        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.TOKEN_GIT }}
+          NODE_AUTH_TOKEN: ${{ secrets.TOKEN_GIT }}  # встроенный токен
