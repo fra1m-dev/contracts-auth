@@ -2,7 +2,7 @@ export interface JwtPayload {
 	id: number;
 	email: string;
 	name: string;
-	role: 'student' | 'teacher' | 'admin' | 'user';
+	role: string | string[];
 	specializationId?: number | null;
 	iat?: number;
 	exp?: number;
