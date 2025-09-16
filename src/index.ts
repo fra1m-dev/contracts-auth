@@ -10,3 +10,5 @@ export * from './errors/api-error';
 export * from './errors/validation.exception';
 export * from './types/jwt-payload';
 export * from './types/role.enum';
+export * from './rmq/rmq.module';
+export * from './rmq/rmq.types';
